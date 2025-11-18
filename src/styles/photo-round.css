@@ -1,0 +1,18 @@
+.photo-round-container {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #11AEAF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-round-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(17, 174, 175, 0.3);
+}
+
+.gambar {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}

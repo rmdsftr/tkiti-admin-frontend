@@ -1,0 +1,70 @@
+.watermark-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  right: 0;
+  top: 15px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.watermark-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.watermark-container img {
+  display: block;
+  object-fit: cover;
+}
+
+.watermark-container p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .watermark-container {
+    top: 80px;
+    right: 15px;
+    padding: 8px 15px;
+    gap: 8px;
+  }
+  
+  .watermark-container img {
+    width: 25px;
+  }
+  
+  .watermark-container p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .watermark-container {
+    top: 80px;
+    right: 10px;
+    padding: 6px 12px;
+    gap: 6px;
+  }
+  
+  .watermark-container img {
+    width: 22px;
+  }
+  
+  .watermark-container p {
+    font-size: 11px;
+  }
+}

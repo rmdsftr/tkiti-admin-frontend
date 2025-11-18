@@ -1,0 +1,64 @@
+.kegiatan-container {
+    display: flex;
+    gap: 15pt;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 15pt;
+    min-height: 150px; 
+}
+
+
+.kegiatan-container .gambar{
+    width: 200px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    gap: 10pt;
+    justify-content: center;
+    align-items: center;
+}
+
+.teks {
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ❗ membuat tanggal turun ke bawah */
+}
+
+
+.teks h3{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.teks p{
+    font-size: 13px;
+    text-align: justify;
+}
+
+.teks .tanggal{
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+.icon{
+    color: #11AEAF;
+    font-size: 15px;
+}
+
+.icon .action{
+    cursor: pointer;
+}
+
+.icon .action:hover{
+    color: #0d8c8c;
+}

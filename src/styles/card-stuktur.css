@@ -1,0 +1,260 @@
+
+.struktur-page {
+    width: 100%;
+    padding: 0;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.page-title {
+    text-align: left;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    color: black;
+    margin-bottom: 40px;
+    position: relative;
+    animation: slideDown 0.8s ease-out;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #11AEAF, #0d8f90);
+    margin: 12px 0 0;
+    border-radius: 2px;
+}
+
+
+.struktur-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.divisi-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.divisi-header {
+    margin-bottom: 30px;
+}
+
+.divisi-header h2 {
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 600;
+    color: #11AEAF;
+    margin-bottom: 12px;
+}
+
+.divider {
+    height: 3px;
+    background: linear-gradient(90deg, #11AEAF, transparent);
+    border-radius: 2px;
+    max-width: 400px;
+}
+
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+.struktur-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 200px;
+    cursor: pointer;
+    animation: fadeInScale 0.6s ease-out;
+}
+
+.struktur-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(17, 174, 175, 0.2);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(17, 174, 175, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-content {
+    padding: 16px;
+    text-align: center;
+}
+
+.card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.card-jabatan {
+    font-size: 12px;
+    color: #11AEAF;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .struktur-page {
+        padding: 0;
+    }
+    
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .struktur-wrapper {
+        gap: 35px;
+    }
+    
+    .card-grid {
+        gap: 15px;
+    }
+    
+    .struktur-card {
+        width: 180px;
+    }
+    
+    .card-image-wrapper {
+        height: 180px;
+    }
+    
+    .card-content {
+        padding: 14px;
+    }
+    
+    .card-name {
+        font-size: 14px;
+    }
+    
+    .card-jabatan {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .struktur-wrapper {
+        gap: 30px;
+    }
+    
+    .card-grid {
+        gap: 12px;
+    }
+    
+    .struktur-card {
+        width: 160px;
+    }
+    
+    .card-image-wrapper {
+        height: 160px;
+    }
+    
+    .card-content {
+        padding: 12px;
+    }
+    
+    .card-name {
+        font-size: 13px;
+    }
+    
+    .card-jabatan {
+        font-size: 10px;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .struktur-card {
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-name {
+        color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .struktur-card:hover {
+        box-shadow: 0 12px 24px rgba(17, 174, 175, 0.2);
+    }
+}
