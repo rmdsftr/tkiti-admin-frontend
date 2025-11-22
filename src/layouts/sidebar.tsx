@@ -14,7 +14,7 @@ function SidebarLayout({ nama, nolab }: Props) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const menuItems = [
-    { menu: "Dashboard", link: "/", icon: <FaHome /> },
+    { menu: "Dashboard", link: "/dashboard", icon: <FaHome /> },
     { menu: "Anggota", link: "/anggota", icon: <FaUser /> },
     { menu: "Artikel", link: "/artikel", icon: <FaRegNewspaper /> },
     { menu: "Kegiatan", link: "/kegiatan", icon: <FaCalendarAlt /> },

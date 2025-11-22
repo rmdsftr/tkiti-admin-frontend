@@ -6,6 +6,8 @@ import Filter from "../components/filter";
 import { useState } from "react";
 import FloatingButton from "../components/floating-button";
 import Pagination from "../components/pagination";
+import SearchBar from "../components/search";
+import ReadArticleLayout from "../layouts/ReadArticle";
 
 const artikelData = [
     {
@@ -243,12 +245,6 @@ export default function ArtikelPage(){
     const currentData = sortedData.slice(startIndex, startIndex + itemsPerPage);
 
     
-    const handlePenulisChange = (value: string) => {
-        setSelectedPenulis(value);
-        setCurrentPage(1); 
-    };
-
-    
     const handleUrutanChange = (value: string) => {
         setSelectedUrutan(value);
         setCurrentPage(1); 
@@ -268,30 +264,14 @@ export default function ArtikelPage(){
                     iconLeft={<FaFilter />}
                     iconRight={<FaChevronDown />}
                     options={[
-                        { label: "Semua Penulis", value: "all" },
-                        { label: "Budi Santoso", value: "Budi Santoso" },
-                        { label: "Sarah Wijaya", value: "Sarah Wijaya" },
-                        { label: "Ahmad Rizki", value: "Ahmad Rizki" },
-                        { label: "Rina Kusuma", value: "Rina Kusuma" },
-                        { label: "Dimas Prasetyo", value: "Dimas Prasetyo" }
+                        { label: "Terpublikasi", value: "published" },
+                        { label: "Draft", value: "draft" },
                     ]}
-                    placeholder="Pilih Penulis"
-                    defaultValue="all"
-                    onChange={handlePenulisChange}
-                />
-                
-                <Filter
-                    iconLeft={<FaFilter />}
-                    iconRight={<FaChevronDown />}
-                    options={[
-                        { label: "Terbaru", value: "newest" },
-                        { label: "Terlama", value: "oldest" },
-                        { label: "Terpopuler", value: "popular" },
-                    ]}
-                    placeholder="Urutkan"
-                    defaultValue="newest"
+                    placeholder="Terpublikasi"
+                    defaultValue="published"
                     onChange={handleUrutanChange}
                 />
+                <SearchBar/>
             </div>
 
             <div style={{
@@ -330,6 +310,8 @@ export default function ArtikelPage(){
                     onPageChange={setCurrentPage}
                 />
             )}
+
+            <ReadArticleLayout/>
         </div>
     )
 }

@@ -5,7 +5,7 @@ function Watermark(){
     return(
         <div className="watermark-container">
             <img src={logo} alt="Logo TKITI" width={20}/>
-            <p>Tata Kelola & Infrastruktur TI</p>
+            <p>TIKITIKI Admin Panel</p>
         </div>
     )
 }
